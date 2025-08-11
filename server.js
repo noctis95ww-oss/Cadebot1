@@ -4,6 +4,7 @@ const path = require('path');
 
 const port = process.env.PORT || 3000;
 const imagesDir = path.join(__dirname, 'images');
+const logosDir = path.join(__dirname, 'logos');
 
 const mimeTypes = {
   '.html': 'text/html',
@@ -49,6 +50,9 @@ const server = http.createServer((req, res) => {
     });
   } else if (req.url.startsWith('/images/')) {
     const filePath = path.join(imagesDir, req.url.replace('/images/', ''));
+    sendFile(res, filePath);
+  } else if (req.url.startsWith('/logos/')) {
+    const filePath = path.join(logosDir, req.url.replace('/logos/', ''));
     sendFile(res, filePath);
   } else {
     res.writeHead(404);
