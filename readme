@@ -1,5 +1,5 @@
 副屏幕网页
 
-将要轮播的图片放到 images 目录，logo.png 文件放在 logos 目录（仓库中未包含示例文件）。
+将要轮播的图片放到 images 目录，logo.svg 文件放在 logos 目录（仓库中未包含示例文件）。
 运行 `node server.js` 后在浏览器中打开 `http://localhost:3000` 即可。
 图片会每 5 秒切换一张。
